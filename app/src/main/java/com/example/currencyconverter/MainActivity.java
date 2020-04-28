@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
-    EditText fromValue, toValue;
+    EditText value1, value2;
+    Spinner spinner1, spinner2;
     Button convert;
     String from, to;
     void setupListeners() {
@@ -23,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fromValue = findViewById(R.id.from);
-        toValue = findViewById(R.id.to);
+        value1 = findViewById(R.id.from);
+        value2 = findViewById(R.id.to);
         convert = findViewById(R.id.convert);
     }
 }
