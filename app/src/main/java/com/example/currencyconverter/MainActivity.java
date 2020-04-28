@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
     }
@@ -33,5 +34,25 @@ public class MainActivity extends AppCompatActivity {
         spinner2 = findViewById(R.id.spinner2);
         convert = findViewById(R.id.convert);
         setupListeners();
+    }
+
+    class spinner1 implements AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> a, View b, int c, long d) {
+            currency1 = a.getItemAtPosition(c).toString();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> a) {}
+    }
+
+    class spinner2 implements AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> a, View b, int c, long d) {
+            currency2 = a.getItemAtPosition(c).toString();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> a) {}
     }
 }
