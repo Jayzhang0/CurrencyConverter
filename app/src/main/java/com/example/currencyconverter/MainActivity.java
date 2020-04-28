@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    EditText input, output;
+    EditText fromValue, toValue;
     Button convert;
     String from, to;
     void setupListeners() {
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        input = findViewById(R.id.from);
-        output = findViewById(R.id.currencyConverter);
-        convert = findViewById(R.id.button);
+        fromValue = findViewById(R.id.from);
+        toValue = findViewById(R.id.to);
+        convert = findViewById(R.id.convert);
     }
 }
