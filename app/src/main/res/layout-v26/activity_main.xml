@@ -10,15 +10,16 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:editable="false"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="From"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:text="@string/from"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.89"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.89" />
 
     <EditText
         android:id="@+id/editText2"
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="To"
+        android:text="@string/to"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,7 @@
         android:layout_width="180dp"
         android:layout_height="72dp"
         android:background="#90CAD1"
-        android:text="Convert"
+        android:text="@string/convert"
         android:textColor="#EEF2F8"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/editText2"

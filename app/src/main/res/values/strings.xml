@@ -3,4 +3,7 @@
     <string name="start_converting">Start converting</string>
     <string name="todo">TODO</string>
     <string name="currency_converter">Currency Converter</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="convert">Convert</string>
 </resources>
