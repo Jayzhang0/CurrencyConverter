@@ -27,7 +27,7 @@
         android:layout_height="44dp"
         android:autofillHints=""
         android:clickable="false"
-        android:editable="true"
+        android:editable="false"
         android:ems="10"
         android:inputType="numberDecimal"
         android:text="To"
