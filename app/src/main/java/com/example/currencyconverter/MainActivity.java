@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import org.json.JSONObject;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -26,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                fetch a = new fetch();
+                a.execute(value1.getText().toString());
             }
         });
     }
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class fetch extends AsyncTask<String, Void, Void> {
-
+        String result;
         @Override
         protected Void doInBackground(String... params) {
             OkHttpClient client = new OkHttpClient();
@@ -71,8 +74,19 @@ public class MainActivity extends AppCompatActivity {
                     params[0] + "&from=" + currency1 + "&to=" + currency2).build();
             try {
                 Response response = client.newCall(request).execute();
-                
+                result = response.body().string();
+            } catch (Exception e) {
             }
+            return null;
+        }
+        
+        @Override
+        protected void onPostExecute(Void v) {
+            try {
+                value2.setText(new JSONObject(result).getJSONObject("rates").getString(currency2));
+            } catch (Exception e) {
+            }
+            super.onPostExecute(v);
         }
     }
 }
