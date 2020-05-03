@@ -2,12 +2,18 @@ package com.example.currencyconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 
 public class MainActivity extends AppCompatActivity {
     EditText value1, value2;
@@ -54,5 +60,19 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onNothingSelected(AdapterView<?> a) {}
+    }
+
+    class fetch extends AsyncTask<String, Void, Void> {
+
+        @Override
+        protected Void doInBackground(String... params) {
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder().url("https://frankfurter.app/latest?amount" +
+                    params[0] + "&from=" + currency1 + "&to=" + currency2).build();
+            try {
+                Response response = client.newCall(request).execute();
+                
+            }
+        }
     }
 }
