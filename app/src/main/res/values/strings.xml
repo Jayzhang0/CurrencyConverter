@@ -6,4 +6,14 @@
     <string name="to">To</string>
     <string name="from">From</string>
     <string name="convert">Convert</string>
+
+    <string-array name="option">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>CNY</item>
+        <item>CAD</item>
+        <item>JPY</item>
+        <item>GBP</item>
+    </string-array>
+
 </resources>
