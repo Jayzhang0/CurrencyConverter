@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(String... params) {
             OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder().url("https://frankfurter.app/latest?amount" +
+            Request request = new Request.Builder().url("https://frankfurter.app/latest?amount=" +
                     params[0] + "&from=" + currency1 + "&to=" + currency2).build();
             try {
                 Response response = client.newCall(request).execute();

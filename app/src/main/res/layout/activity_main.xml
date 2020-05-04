@@ -54,8 +54,8 @@
 
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="223dp"
-        android:layout_height="41dp"
+        android:layout_width="266dp"
+        android:layout_height="43dp"
         android:entries="@array/option"
         app:layout_constraintBottom_toTopOf="@+id/convert"
         app:layout_constraintEnd_toEndOf="parent"
