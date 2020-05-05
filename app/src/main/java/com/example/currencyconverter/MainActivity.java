@@ -19,10 +19,10 @@ import okhttp3.Response;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText value1, value2;
+    static EditText value1, value2;
     Spinner spinner1, spinner2;
     Button convert;
-    String currency1, currency2;
+    static String currency1, currency2;
     void setupListeners() {
         spinner1.setOnItemSelectedListener(new spinner1());
         spinner2.setOnItemSelectedListener(new spinner2());
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         public void onNothingSelected(AdapterView<?> a) {}
     }
 
-    class fetch extends AsyncTask<String, Void, Void> {
+    static class fetch extends AsyncTask<String, Void, Void> {
         String result;
         @Override
         protected Void doInBackground(String... params) {
